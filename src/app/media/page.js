@@ -1,17 +1,26 @@
 export default function MediaPage() {
   return (
-    <main className="bg-white text-gray-900">
+    <main className="bg-[#F7FAFC] text-gray-900 overflow-x-hidden">
 
       {/* ================= PAGE HEADER ================= */}
-      <section className="bg-[#0E1E2A] text-white">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <p className="text-sm uppercase tracking-widest text-[#F5B301] font-semibold mb-2">
+      <section className="relative bg-gradient-to-br from-[#0E1E2A] via-[#12283A] to-[#0E1E2A] text-white overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.04]
+          bg-[linear-gradient(to_right,white_1px,transparent_1px),
+              linear-gradient(to_bottom,white_1px,transparent_1px)]
+          bg-[size:48px_48px]"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-18 md:py-24">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#F5B301] font-semibold mb-3">
             Public Communication
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
             Media & Updates
           </h1>
-          <p className="text-lg max-w-3xl leading-relaxed">
+
+          <p className="text-base md:text-lg text-gray-200 max-w-3xl leading-relaxed">
             Official announcements, press updates, public engagements, and
             program-related activities.
           </p>
@@ -19,8 +28,8 @@ export default function MediaPage() {
       </section>
 
       {/* ================= INTRO ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <p className="max-w-4xl text-gray-700 leading-relaxed">
+      <section className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+        <p className="max-w-4xl text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed">
           This section provides verified updates on policy announcements,
           program launches, field visits, and public interactions. Information
           shared here is intended for citizens, media organisations, and
@@ -29,9 +38,9 @@ export default function MediaPage() {
       </section>
 
       {/* ================= LATEST UPDATES ================= */}
-      <section className="bg-[#F9FAFB] border-t">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="text-2xl font-extrabold mb-10">
+      <section className="bg-white border-t border-[#E6EDF3]">
+        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+          <h2 className="text-xl md:text-2xl font-extrabold mb-12 text-[#0E1E2A]">
             Latest Updates
           </h2>
 
@@ -70,12 +79,12 @@ export default function MediaPage() {
       </section>
 
       {/* ================= PRESS & PUBLIC EVENTS ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-2xl font-extrabold mb-10">
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <h2 className="text-xl md:text-2xl font-extrabold mb-10 text-[#0E1E2A]">
           Press & Public Engagements
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
           <EventCard
             title="Farmer Interaction Meetings"
             desc="Village-level interactions conducted as part of agricultural extension and outreach activities."
@@ -96,20 +105,20 @@ export default function MediaPage() {
       </section>
 
       {/* ================= MEDIA NOTE ================= */}
-      <section className="bg-[#F9FAFB] border-t">
-        <div className="max-w-4xl mx-auto px-6 py-20">
-          <h2 className="text-2xl font-extrabold mb-6">
+      <section className="bg-white border-t border-[#E6EDF3]">
+        <div className="max-w-4xl mx-auto px-6 py-16 md:py-20">
+          <h2 className="text-xl md:text-2xl font-extrabold mb-6 text-[#0E1E2A]">
             Media Note
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
+          <p className="text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed mb-4">
             All information published on this page is based on official records,
             program announcements, and verified departmental inputs. Media
             organisations are encouraged to refer to official press releases
             and government notifications for detailed reporting.
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed">
             For press queries and clarifications, communications may be routed
             through the respective departmental offices.
           </p>
@@ -126,19 +135,45 @@ export default function MediaPage() {
 
 function UpdateItem({ date, title, description }) {
   return (
-    <div className="bg-white border p-6">
-      <p className="text-sm text-gray-500 mb-1">{date}</p>
-      <h3 className="font-bold text-lg mb-2">{title}</h3>
-      <p className="text-gray-700 leading-relaxed">{description}</p>
+    <div className="relative bg-white rounded-2xl border border-[#E6EDF3]
+      p-6 shadow-[0_25px_50px_-35px_rgba(14,30,42,0.35)]"
+    >
+      {/* authority accent */}
+      <div className="absolute left-0 top-6 bottom-6 w-[3px]
+        bg-gradient-to-b from-[#C9A24D] to-transparent"
+      />
+
+      <p className="text-xs uppercase tracking-wide text-[#6B7C8C] mb-1">
+        {date}
+      </p>
+
+      <h3 className="font-semibold text-[17px] mb-2 text-[#0E1E2A]">
+        {title}
+      </h3>
+
+      <p className="text-sm text-[#445566] leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 }
 
 function EventCard({ title, desc }) {
   return (
-    <div className="border p-6">
-      <h3 className="font-bold mb-2">{title}</h3>
-      <p className="text-gray-700 leading-relaxed">{desc}</p>
+    <div className="relative bg-white rounded-2xl border border-[#E6EDF3]
+      p-6 shadow-[0_25px_50px_-35px_rgba(14,30,42,0.35)]"
+    >
+      <div className="absolute left-0 top-6 bottom-6 w-[3px]
+        bg-gradient-to-b from-[#C9A24D] to-transparent"
+      />
+
+      <h3 className="font-semibold text-[16.5px] mb-2 text-[#0E1E2A]">
+        {title}
+      </h3>
+
+      <p className="text-sm text-[#445566] leading-relaxed">
+        {desc}
+      </p>
     </div>
   );
 }

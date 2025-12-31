@@ -9,10 +9,19 @@ export const metadata = {
     "Official website of K. Atchannaidu, Cabinet Minister, Government of Andhra Pradesh.",
 };
 
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body  className={`${poppins.className} antialiased bg-[#F7FAFC] text-gray-900`}>
         <Navbar />
         {children}
         <Footer />

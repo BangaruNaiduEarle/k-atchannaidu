@@ -459,7 +459,7 @@ function SupportCard({ title, value, highlight }) {
       <div className="mb-6 h-[1px] w-10 bg-[#C9A24D]/60" />
 
       {/* title */}
-      <p className="text-[11px] uppercase tracking-[0.18em] text-[#6B7C8C] mb-3">
+      <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#6B7C8C] mb-3">
         {title}
       </p>
 

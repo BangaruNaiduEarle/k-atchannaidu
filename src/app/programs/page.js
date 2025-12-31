@@ -1,17 +1,26 @@
 export default function ProgramsPage() {
   return (
-    <main className="bg-white text-gray-900">
+    <main className="bg-[#F7FAFC] text-gray-900 overflow-x-hidden">
 
       {/* ================= PAGE HEADER ================= */}
-      <section className="bg-[#0E1E2A] text-white">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <p className="text-sm uppercase tracking-widest text-[#F5B301] font-semibold mb-2">
+      <section className="relative bg-gradient-to-br from-[#0E1E2A] via-[#12283A] to-[#0E1E2A] text-white overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.04]
+          bg-[linear-gradient(to_right,white_1px,transparent_1px),
+              linear-gradient(to_bottom,white_1px,transparent_1px)]
+          bg-[size:48px_48px]"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-18 md:py-24">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#F5B301] font-semibold mb-3">
             Government Initiatives
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
             Flagship Programs
           </h1>
-          <p className="text-lg max-w-3xl leading-relaxed">
+
+          <p className="text-base md:text-lg text-gray-200 max-w-3xl leading-relaxed">
             Major initiatives launched and implemented to strengthen agriculture,
             allied sectors, and farmer welfare across Andhra Pradesh.
           </p>
@@ -19,8 +28,8 @@ export default function ProgramsPage() {
       </section>
 
       {/* ================= INTRO ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <p className="max-w-4xl text-gray-700 leading-relaxed">
+      <section className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+        <p className="max-w-4xl text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed">
           As the Cabinet Minister responsible for Agriculture and allied sectors,
           K. Atchannaidu has prioritised direct outreach, scientific farming,
           income security, and institutional support for farmers, fishermen,
@@ -30,10 +39,9 @@ export default function ProgramsPage() {
       </section>
 
       {/* ================= PROGRAM LIST ================= */}
-      <section className="bg-[#F9FAFB] border-t">
-        <div className="max-w-7xl mx-auto px-6 py-20 space-y-16">
+      <section className="bg-white border-t border-[#E6EDF3]">
+        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 space-y-16">
 
-          {/* PROGRAM 1 */}
           <ProgramBlock
             title="Polam Pilustundi (పోలం పిలుస్తోంది)"
             subtitle="‘The Field is Calling’"
@@ -46,7 +54,6 @@ export default function ProgramsPage() {
             ]}
           />
 
-          {/* PROGRAM 2 */}
           <ProgramBlock
             title="Annadata Sukhibhava Scheme"
             subtitle="Income Support for Farmers"
@@ -59,7 +66,6 @@ export default function ProgramsPage() {
             ]}
           />
 
-          {/* PROGRAM 3 */}
           <ProgramBlock
             title="Soil Health Mission"
             subtitle="Scientific Nutrient Management"
@@ -72,7 +78,6 @@ export default function ProgramsPage() {
             ]}
           />
 
-          {/* PROGRAM 4 */}
           <ProgramBlock
             title="Drip Irrigation Expansion"
             subtitle="Efficient Water Use in Agriculture"
@@ -85,7 +90,6 @@ export default function ProgramsPage() {
             ]}
           />
 
-          {/* PROGRAM 5 */}
           <ProgramBlock
             title="Fisheries & Aquaculture Development"
             subtitle="Support for Coastal & Inland Fisheries"
@@ -98,7 +102,6 @@ export default function ProgramsPage() {
             ]}
           />
 
-          {/* PROGRAM 6 */}
           <ProgramBlock
             title="Dairy & Animal Husbandry Initiatives"
             subtitle="Livestock Health & Rural Income"
@@ -115,8 +118,8 @@ export default function ProgramsPage() {
       </section>
 
       {/* ================= SUPPORT INFO ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-2xl font-extrabold mb-6">
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <h2 className="text-xl md:text-2xl font-extrabold mb-8 text-[#0E1E2A]">
           Farmer & Public Assistance
         </h2>
 
@@ -149,14 +152,23 @@ export default function ProgramsPage() {
 
 function ProgramBlock({ title, subtitle, points }) {
   return (
-    <div className="bg-white border p-8">
-      <h3 className="text-xl font-extrabold mb-2">
+    <div className="relative bg-white rounded-2xl border border-[#E6EDF3]
+      p-6 md:p-8 shadow-[0_30px_60px_-35px_rgba(14,30,42,0.35)]"
+    >
+      {/* authority line */}
+      <div className="absolute left-0 top-6 bottom-6 w-[3px]
+        bg-gradient-to-b from-[#C9A24D] to-transparent"
+      />
+
+      <h3 className="text-lg md:text-xl font-extrabold mb-1 text-[#0E1E2A]">
         {title}
       </h3>
-      <p className="text-sm text-gray-600 mb-6">
+
+      <p className="text-sm text-[#6B7C8C] mb-6">
         {subtitle}
       </p>
-      <ul className="space-y-3 text-gray-700 leading-relaxed list-disc pl-5">
+
+      <ul className="space-y-3 text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed list-disc pl-5">
         {points.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
@@ -167,10 +179,18 @@ function ProgramBlock({ title, subtitle, points }) {
 
 function InfoCard({ title, value, desc }) {
   return (
-    <div className="border p-6">
-      <p className="text-sm text-gray-600 mb-1">{title}</p>
-      <p className="font-bold mb-2">{value}</p>
-      <p className="text-sm text-gray-700">{desc}</p>
+    <div className="rounded-xl bg-white border border-[#E6EDF3]
+      p-6 shadow-[0_20px_40px_-30px_rgba(14,30,42,0.25)]"
+    >
+      <p className="text-xs uppercase tracking-wide text-[#6B7C8C] mb-2">
+        {title}
+      </p>
+      <p className="font-semibold text-[#0E1E2A] mb-2 break-words">
+        {value}
+      </p>
+      <p className="text-sm text-[#445566]">
+        {desc}
+      </p>
     </div>
   );
 }

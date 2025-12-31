@@ -1,17 +1,26 @@
 export default function PoliticalJourneyPage() {
   return (
-    <main className="bg-white text-gray-900">
+    <main className="bg-[#F7FAFC] text-gray-900 overflow-x-hidden">
 
       {/* ================= PAGE HEADER ================= */}
-      <section className="bg-[#0E1E2A] text-white">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <p className="text-sm uppercase tracking-widest text-[#F5B301] font-semibold mb-2">
+      <section className="relative bg-gradient-to-br from-[#0E1E2A] via-[#12283A] to-[#0E1E2A] text-white overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.04]
+          bg-[linear-gradient(to_right,white_1px,transparent_1px),
+              linear-gradient(to_bottom,white_1px,transparent_1px)]
+          bg-[size:48px_48px]"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-18 md:py-24">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#F5B301] font-semibold mb-3">
             Public Life & Leadership
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
             Political Journey
           </h1>
-          <p className="text-lg font-semibold max-w-3xl">
+
+          <p className="text-base md:text-lg font-semibold text-gray-200 max-w-3xl">
             A chronological overview of electoral milestones, leadership roles,
             and ministerial responsibilities.
           </p>
@@ -19,8 +28,8 @@ export default function PoliticalJourneyPage() {
       </section>
 
       {/* ================= INTRO ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <p className="max-w-4xl text-gray-700 leading-relaxed">
+      <section className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+        <p className="max-w-4xl text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed">
           K. Atchannaidu has been actively involved in public life for nearly
           three decades. His political journey reflects sustained public
           support, organisational leadership, and ministerial responsibility
@@ -29,14 +38,13 @@ export default function PoliticalJourneyPage() {
       </section>
 
       {/* ================= TIMELINE ================= */}
-      <section className="bg-[#F9FAFB] border-t">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="text-2xl font-extrabold mb-12">
+      <section className="bg-white border-t border-[#E6EDF3]">
+        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+          <h2 className="text-xl md:text-2xl font-extrabold mb-12 text-[#0E1E2A]">
             Chronological Timeline
           </h2>
 
           <div className="space-y-10 max-w-4xl">
-
             <TimelineItem
               year="1996"
               title="Entry into Legislature"
@@ -96,81 +104,52 @@ export default function PoliticalJourneyPage() {
               title="Cabinet Minister, Government of Andhra Pradesh"
               description="Inducted into the State Cabinet and entrusted with key portfolios related to agriculture and allied sectors."
             />
-
           </div>
         </div>
       </section>
 
       {/* ================= ELECTORAL RECORD ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-2xl font-extrabold mb-10">
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <h2 className="text-xl md:text-2xl font-extrabold mb-10 text-[#0E1E2A]">
           Electoral Record (Summary)
         </h2>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border text-sm">
-            <thead className="bg-[#F9FAFB]">
+        <div className="overflow-x-auto rounded-xl border border-[#E6EDF3] bg-white shadow-sm">
+          <table className="w-full text-sm">
+            <thead className="bg-[#F7FAFC]">
               <tr>
-                <th className="border px-4 py-2 text-left">Year</th>
-                <th className="border px-4 py-2 text-left">Constituency</th>
-                <th className="border px-4 py-2 text-left">Result</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#0E1E2A]">Year</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#0E1E2A]">Constituency</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#0E1E2A]">Result</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td className="border px-4 py-2">1996</td>
-                <td className="border px-4 py-2">Harishchandrapuram</td>
-                <td className="border px-4 py-2">Elected (By-election)</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">1999</td>
-                <td className="border px-4 py-2">Harishchandrapuram</td>
-                <td className="border px-4 py-2">Elected</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">2004</td>
-                <td className="border px-4 py-2">Harishchandrapuram</td>
-                <td className="border px-4 py-2">Elected</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">2009</td>
-                <td className="border px-4 py-2">Tekkali</td>
-                <td className="border px-4 py-2">Contested</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">2014</td>
-                <td className="border px-4 py-2">Tekkali</td>
-                <td className="border px-4 py-2">Elected</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">2019</td>
-                <td className="border px-4 py-2">Tekkali</td>
-                <td className="border px-4 py-2">Elected</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">2024</td>
-                <td className="border px-4 py-2">Tekkali</td>
-                <td className="border px-4 py-2">Elected</td>
-              </tr>
+            <tbody className="text-[#445566]">
+              <TableRow year="1996" constituency="Harishchandrapuram" result="Elected (By-election)" />
+              <TableRow year="1999" constituency="Harishchandrapuram" result="Elected" />
+              <TableRow year="2004" constituency="Harishchandrapuram" result="Elected" />
+              <TableRow year="2009" constituency="Tekkali" result="Contested" />
+              <TableRow year="2014" constituency="Tekkali" result="Elected" />
+              <TableRow year="2019" constituency="Tekkali" result="Elected" />
+              <TableRow year="2024" constituency="Tekkali" result="Elected" />
             </tbody>
           </table>
         </div>
       </section>
 
       {/* ================= LEADERSHIP & APPROACH ================= */}
-      <section className="bg-[#F9FAFB] border-t">
-        <div className="max-w-4xl mx-auto px-6 py-20">
-          <h2 className="text-2xl font-extrabold mb-6">
+      <section className="bg-white border-t border-[#E6EDF3]">
+        <div className="max-w-4xl mx-auto px-6 py-16 md:py-20">
+          <h2 className="text-xl md:text-2xl font-extrabold mb-6 text-[#0E1E2A]">
             Leadership & Public Service
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
+          <p className="text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed mb-4">
             Throughout his political career, K. Atchannaidu has been recognised
             for his organisational discipline, grassroots engagement, and
             consistent advocacy for farmer welfare and rural development.
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed">
             His leadership roles have spanned both governance and opposition,
             providing him with a balanced perspective on policy implementation,
             institutional accountability, and public administration.
@@ -183,15 +162,38 @@ export default function PoliticalJourneyPage() {
 }
 
 /* -------------------------------
-   Timeline helper component
+   Helper Components
 -------------------------------- */
 
 function TimelineItem({ year, title, description }) {
   return (
-    <div className="border-l-4 border-[#F5B301] pl-6">
-      <p className="text-sm font-semibold text-[#0E1E2A]">{year}</p>
-      <h3 className="text-lg font-bold mt-1 mb-2">{title}</h3>
-      <p className="text-gray-700 leading-relaxed">{description}</p>
+    <div className="relative pl-8">
+      {/* vertical authority line */}
+      <div className="absolute left-0 top-0 h-full w-[2px]
+        bg-gradient-to-b from-[#C9A24D] to-transparent"
+      />
+
+      <p className="text-xs font-semibold tracking-wide text-[#C9A24D] mb-1">
+        {year}
+      </p>
+
+      <h3 className="text-base md:text-lg font-bold text-[#0E1E2A] mb-2">
+        {title}
+      </h3>
+
+      <p className="text-[14.5px] md:text-[15px] text-[#445566] leading-relaxed">
+        {description}
+      </p>
     </div>
+  );
+}
+
+function TableRow({ year, constituency, result }) {
+  return (
+    <tr className="border-t border-[#E6EDF3]">
+      <td className="px-4 py-3">{year}</td>
+      <td className="px-4 py-3">{constituency}</td>
+      <td className="px-4 py-3">{result}</td>
+    </tr>
   );
 }

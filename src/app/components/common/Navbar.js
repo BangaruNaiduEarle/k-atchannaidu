@@ -51,7 +51,7 @@ export default function Navbar() {
             href="/"
             className="text-white font-extrabold text-lg tracking-tight"
           >
-            K. <span className="text-[#C9A24D]">Atchannaidu</span>
+            Kinjarapu {" "} <span className="text-[#C9A24D]">Atchannaidu</span>
           </Link>
 
           {/* Desktop Nav */}

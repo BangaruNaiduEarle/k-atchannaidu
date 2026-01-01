@@ -37,6 +37,123 @@ export default function MediaPage() {
         </p>
       </section>
 
+      <section className="bg-gradient-to-b from-white to-[#F7FAFC]">
+  <div className="max-w-7xl mx-auto px-6 py-12 md:py-24">
+
+    {/* ================= SECTION HEADER ================= */}
+    <div className="max-w-3xl mb-6 md:mb-14">
+      <h3 className="text-2xl font-extrabold text-[#0E1E2A] mb-3">
+        Public Engagement Moments
+      </h3>
+
+      <p className="text-[15.5px] text-[#5A6B7A] leading-relaxed">
+        Selected moments from public meetings, field interactions,
+        and official engagements across Andhra Pradesh.
+      </p>
+    </div>
+
+    {/* ================= BENTO GRID ================= */}
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+      {/* FEATURE IMAGE */}
+      <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl bg-[#0E1E2A]
+        shadow-[0_30px_70px_-35px_rgba(14,30,42,0.6)]">
+
+        <img
+          src="/assets/image_19.jpg"
+          alt="Public interaction during field visit"
+          className="w-full h-full object-cover opacity-90"
+        />
+
+        {/* overlay */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t
+          from-black/25 via-black/10 to-transparent"
+        /> */}
+
+        {/* caption */}
+        {/* <div className="absolute bottom-5 left-5 right-5">
+          <p className="text-sm text-white/90 font-medium leading-snug">
+            Interaction with farmers during a field outreach programme
+          </p>
+        </div> */}
+      </div>
+
+      {/* SUPPORTING IMAGES */}
+      {[
+        {
+          src: "/assets/v1.jpeg",
+          // label: "Community interaction during review meeting",
+          label:""
+        },
+       
+        {
+          src: "/assets/v3.jpeg",
+          // label: "Discussion with departmental officials",
+          label:""
+        },
+         {
+          src: "/assets/image_18.jpg",
+          // label: "Discussion with departmental officials",
+          label:""
+        }, {
+          src: "/assets/image_21.jpg",
+          // label: "Discussion with departmental officials",
+          label:""
+        },
+       
+          {
+          src: "/assets/image_9.png",
+          // label: "Engagement with farmer representatives",
+          label:""
+        },  {
+          src: "/assets/image_11.png",
+          // label: "Engagement with farmer representatives",
+          label:""
+        },
+         {
+          src: "/assets/image_6.png",
+          // label: "Engagement with farmer representatives",
+          label:""
+        }, {
+          src: "/assets/image_7.png",
+          // label: "Engagement with farmer representatives",
+          label:""
+        }, {
+          src: "/assets/image_8.png",
+          // label: "Engagement with farmer representatives",
+          label:""
+        },
+        // {
+        //   src: "/assets/public-5.jpg",
+        //   label: "Public interaction during programme launch",
+        // },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="relative overflow-hidden rounded-2xl bg-[#0E1E2A]
+            shadow-[0_24px_50px_-30px_rgba(14,30,42,0.45)]"
+        >
+          <img
+            src={item.src}
+            alt={item.label}
+            className="w-full h-full object-cover opacity-90"
+          />
+
+          {/* <div className="absolute inset-0 bg-black/25" /> */}
+
+          <div className="absolute bottom-4 left-4 right-4">
+            <p className="text-[13px] text-white/85 leading-snug">
+              {item.label}
+            </p>
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+
       {/* ================= LATEST UPDATES ================= */}
       <section className="bg-white border-t border-[#E6EDF3]">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">

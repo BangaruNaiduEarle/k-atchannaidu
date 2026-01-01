@@ -94,7 +94,7 @@ export default function AboutPage() {
                 • Intermediate (12th Standard), completed in 1988
               </li>
               <li>
-                • Bachelor of Science (B.Sc.) – Discontinued
+                • Bachelor of Science (B.Sc.) 
                 <br />
                 <span className="text-sm text-gray-500">
                   Andhra University-affiliated college, Visakhapatnam

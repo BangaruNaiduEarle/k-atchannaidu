@@ -9,7 +9,7 @@ const imagesRow1 = [
   "/assets/image_5.png",
   "/assets/image_27.jpeg",
   "/assets/image_12.png",
-   "/assets/image_15.png", "/assets/image_23.jpg", "/assets/image_26.jpeg", 
+   "/assets/image_15.png", "/assets/image_23.png", 
 ];
 
 const imagesRow2 = [
@@ -18,8 +18,7 @@ const imagesRow2 = [
   "/assets/image_7.png",
    "/assets/image_29.jpeg",
   "/assets/image_9.png",
-  "/assets/image_22.jpg",
-   "/assets/image_30.jpeg",
+  "/assets/image_22.png",
 ];
 
 export default function HomeMarquee() {

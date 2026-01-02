@@ -125,9 +125,9 @@ export default function HomePage() {
               <a
                 href="/programs"
                 className="px-7 py-3 bg-gradient-to-r from-[#F5B301] to-[#FFD666]
-                  text-[#0E1E2A] font-bold text-sm
+                  text-[#0E1E2A] font-bold text-[12px] md:text-sm
                   hover:shadow-[0_12px_30px_-10px_rgba(245,179,1,0.6)]
-                  transition-all"
+                  transition-all text-center"
               >
                 Flagship Programs
               </a>
@@ -135,8 +135,8 @@ export default function HomePage() {
               <a
                 href="/schemes"
                 className="px-7 py-3 border border-white/70 text-white
-                  font-bold text-sm hover:bg-white hover:text-[#0E1E2A]
-                  transition-all"
+                  font-bold text-[12px] md:text-sm hover:bg-white hover:text-[#0E1E2A]
+                  transition-all text-center"
               >
                 Farmer Schemes & Support
               </a>
@@ -466,7 +466,7 @@ function SupportCard({ title, value, highlight }) {
       {/* value */}
       <p
         className="
-          text-[18px] font-semibold leading-snug break-words
+         text-[14px] md:text-[18px] font-semibold leading-snug break-words
           text-[#0E1E2A]
         "
       >

@@ -246,8 +246,8 @@ export default function HomePage() {
         </div>
 
         {/* edge fade */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F7FAFC] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F7FAFC] to-transparent" />
+        {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F7FAFC] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F7FAFC] to-transparent" /> */}
 
         <HomeMarquee />
       </section>
@@ -466,7 +466,7 @@ function SupportCard({ title, value, highlight }) {
       {/* value */}
       <p
         className="
-         text-[14px] md:text-[18px] font-semibold leading-snug break-words
+         text-[14px] md:text-[16px] font-semibold leading-snug break-words
           text-[#0E1E2A]
         "
       >

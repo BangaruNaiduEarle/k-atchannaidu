@@ -26,8 +26,8 @@ export default function HomeMarquee() {
     <section className="relative py-12 md:py-24 overflow-hidden">
 
       {/* soft containment fade */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-[#F6F9FC] to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-[#F6F9FC] to-transparent z-10" />
+      {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-[#F6F9FC] to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-[#F6F9FC] to-transparent z-10" /> */}
 
       <div className="space-y-6 md:space-y-14">
         <MarqueeRow images={imagesRow1} direction="left" />
